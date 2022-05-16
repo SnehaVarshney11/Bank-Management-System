@@ -1,4 +1,3 @@
-import com.toedter.calendar.JDateChooser;
 import java.awt.*;
 import java.awt.event.*; //for actionListener
 import javax.swing.*;
