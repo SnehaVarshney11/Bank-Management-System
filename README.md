@@ -17,17 +17,50 @@ Technologies used:-
 2. MySQL
 3. Netbeans
 
+# Images/Glance of the projects
+
+* Login Page
+
 ![Screenshot (258)](https://user-images.githubusercontent.com/78306516/171094100-3d2917d4-5e08-41d0-8ada-b4d4b5f6c7b4.png)
+
+* SignUp One Page
+
 ![Screenshot (259)](https://user-images.githubusercontent.com/78306516/171094164-bbef2b3f-028e-4842-beb2-39f8861b8033.png)
+
+* SignUp Two Page
+
 ![Screenshot (260)](https://user-images.githubusercontent.com/78306516/171094174-2ef4c0a2-f133-4299-8a25-4d71c742ad7d.png)
+
+* Account Details
+
 ![Screenshot (261)](https://user-images.githubusercontent.com/78306516/171094185-9eea82a6-3126-4308-bfa0-ffbbc4921f51.png)
+
+* Transaction Page
+
 ![Screenshot (263)](https://user-images.githubusercontent.com/78306516/171094238-cee11c54-674c-41d7-9058-0d32c44e8649.png)
+
+* Deposite Amount
+
 ![Screenshot (264)](https://user-images.githubusercontent.com/78306516/171094731-4a6f245d-538d-4e46-bb55-dcd44fa7cee2.png)
+
+* Withdrawl Amount
+
 ![Screenshot (265)](https://user-images.githubusercontent.com/78306516/171094634-552b3e29-0235-4b62-81e4-656013378f5e.png)
+
+* Pin Change
+
 ![Screenshot (267)](https://user-images.githubusercontent.com/78306516/171094767-1f7b4444-92a5-467c-b7a8-d5b494085b17.png)
+
+* Withdraw Amount
+
 ![Screenshot (269)](https://user-images.githubusercontent.com/78306516/171094806-62de4912-bdca-4a64-beef-e24f03b33407.png)
+
+* Mini Statement
+
 ![Screenshot (266)](https://user-images.githubusercontent.com/78306516/171094846-0e9c6c06-4773-4b6e-9789-63c8dbbb2b24.png)
+
 ![Screenshot (262)](https://user-images.githubusercontent.com/78306516/171094926-aee42bab-59cd-4fed-a310-4a0e3bd30600.png)
 
+* Video
 
 https://user-images.githubusercontent.com/78306516/171094952-ba865180-29ae-417a-940d-03f6ebd0c7d5.mp4
