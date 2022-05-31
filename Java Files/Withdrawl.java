@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*; //for Date
+import java.sql.ResultSet;
 
 public class Withdrawl extends JFrame implements ActionListener{
     JTextField amount;
@@ -50,24 +51,43 @@ public class Withdrawl extends JFrame implements ActionListener{
             Date date = new Date();
             if(number.equals("")){
                 JOptionPane.showMessageDialog(null, "Please enter the amount you want to withdraw");
+                return;
             }else{
-                try{
-                Conn conn = new Conn();
-                String query = "insert into bank values('"+pinNo+"', '"+date+"', 'Withdrawl', '"+number+"')";
-                conn.stmt.executeUpdate(query);
-                JOptionPane.showMessageDialog(null, "Rs " + number + " Withdraw Successfully");
-                setVisible(false);
-                new Transactions(pinNo).setVisible(true);
-                }catch(Exception e){
+                try {
+                    Conn conn = new Conn();
+                    ResultSet rs = conn.stmt.executeQuery("Select * from bank where pin = '" + pinNo + "'");
+                    long balance = 0;
+                    while (rs.next()) {
+                        if (rs.getString("type").equals("Deposit")) {
+                        balance += Integer.parseInt(rs.getString("amount"));
+                        } else {
+                            // actual balance of user
+                            balance -= Integer.parseInt(rs.getString("amount"));
+                        }
+                    }
+                    if (ae.getSource() != back && balance < Integer.parseInt(number)) {
+                    JOptionPane.showMessageDialog(null, "Insufficient Balance");
+                    setVisible(false);
+                    new Transactions(pinNo).setVisible(true);
+                    return;
+                    }
+                    String query = "insert into bank values('"+pinNo+"', '"+date+"', 'withdrawl', '"+number+"')";
+                    conn.stmt.executeUpdate(query);
+                    JOptionPane.showMessageDialog(null, "Rs "+number+" withdraw Successfully"); 
+                    setVisible(false);
+                    new Transactions(pinNo).setVisible(true);
+                } catch (Exception e) {
                     System.out.println(e);
-                }
+                }       
+          
             }
         }else if(ae.getSource() == back){
-            setVisible(true); 
+            setVisible(false);
             new Transactions(pinNo).setVisible(true);
         }
-    }  
-    
+      
+    }
+            
     public static void main(String[] args){
         new Withdrawl("");
     }
